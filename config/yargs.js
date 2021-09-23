@@ -6,14 +6,14 @@ const argv = require("yargs")
     describe: 'It is the base of the multiplication table'
   })
   .option("l", {
-    alias: "listar",
+    alias: "toList",
     type: "boolean",
     demandOption: true,
     default: false,
     describe: 'Show the tabla in the console'
   })
-  .option("h", {
-    alias: "hasta",
+  .option("u", {
+    alias: "until",
     type: "number",
     default: 10,
     describe: 'Create the table up to the indicated number'

@@ -3,18 +3,18 @@
 const fs = require('fs');
 const colors = require('colors');
 
-const createFile = async ( base = 5, listar = false, hasta = 10 ) => {
+const createFile = async ( base = 5, toList = false, until = 10 ) => {
 
     try {
         let output = "";//Sin colores
         let consola = "";//Para imprimir por consola con los colores elejidos del paquete
 
-        for (let i = 1; i <= hasta; i++) {
+        for (let i = 1; i <= until; i++) {
           output += `${base} X ${i} = ${base * i}\n`;
           consola += `${base} ${'X'.cyan} ${i} ${'='.cyan} ${base * i}\n`;
         }
 
-          if( listar ) {
+          if( toList ) {
             console.log("===============================================".yellow);
             console.log('           This is the table of'.white, colors.cyan( base ) );
             console.log("===============================================".yellow);
